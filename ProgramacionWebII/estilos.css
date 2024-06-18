@@ -1,0 +1,96 @@
+body{
+    margin: 0 auto;
+}
+
+#CapturaDiv{
+    margin: 5% auto;
+    background-color: #fafafa;
+    width: 45%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+#botonAdd{
+    background-color: #25D538;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonAdd:hover{
+    background-color: #0e8b1a;
+    border: 2px solid #000000;
+    color: white;
+}
+
+
+#botonCancel{
+    background-color: #EC1D1D;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#botonCancel:hover{
+    background-color: #550a03;
+    border: 2px solid #000000;
+}
+
+
+#botonGrafico{
+    background-color: #ebf112;
+    width: 170px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#botonGrafico:hover{
+    background-color: #deac07;
+    border: 2px solid #000000;
+}
+
+
+#grilla{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+#grilla td, #grilla th{
+    border: 1px solid #ddd;
+}
+
+#grilla th{
+    background-color: #4caf50;
+    padding: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+}
+
+#grilla tr:nth-child(even){
+    background-color: #f2f2f2f2;
+}
+
+#grilla tr:hover{
+    background-color: #ddd;
+}
+
+.btnDel{
+    background-color: #EC1D1D;
+    border-radius: 5px;
+    color: white;
+}
+
+#pieChart{
+    width: 600px;
+    height: 600px;
+}

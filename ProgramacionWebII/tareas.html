@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+</head>
+<body>
+    <ul id="lista">
+        <li><input type="checkbox" name="" id="chk-1" class="tarea">Tramintar DNI</li>
+        <li><input type="checkbox" name="" id="chk-2" class="tarea">Renovar Licencia</li>
+        <li><input type="checkbox" name="" id="chk-3" class="tarea">Comprar Medicamentos</li>
+        <li><input type="checkbox" name="" id="chk-4" class="tarea">Hacer el Supermercado</li>
+        <li><input type="checkbox" name="" id="chk-5" class="tarea">Ir a la Universidad</li>
+    </ul>
+
+    <input type="text" id="nueva" placeholder="Ingrese una nueva tarea">
+    <input type="button" value="Agregar una nueva tarea" onclick="agregar()">
+    <input type="button" value="Finalizar Tarea" onclick="finalizar()">
+
+    <script>
+        //let numero = document.getElementById("")
+       // let numero = document.getElementsByClassName()
+       // let numero = document.getElementsByTagName("")
+
+        let cont = document.getElementsByClassName("tarea").length +1;
+
+
+        function agregar()
+        {
+            let elemento = document.createElement("li");
+            let check = document.createElement("input");
+            check.type ="checkbox";
+            check.className ="tarea";
+            check.id="chk-"+1;
+            cont++;
+
+            let nuevaTarea = document.getElementById("nueva").value;
+            let texto = document.createTextNode(nuevaTarea);
+
+
+            elemento.appendChild(check);
+            elemento.appendChild(texto);
+            let lista = document.getElementById("lista");
+            lista.appendChild(elemento);
+            document.getElementById("nueva").value = "";
+
+
+
+        }
+    </script>
+</body>
+</html>

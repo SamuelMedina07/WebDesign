@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 Matricula de alumnos por Carrera</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="CapturaDiv">
+        <table>
+            <tr>
+                <td>Ingrese ID:</td>
+                <td><input type="text" id="id" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Ingrese Nombre:</td>
+                <td><input type="text" id="nombre" onkeypress="return soloLetras(event);"></td>
+            </tr>
+            <tr>
+                <td>Ingrese Edad:</td>
+                <td><input type="text" id="edad" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Seleccione Carrera:</td>
+                <td>
+                    <select name="" id="carreras">
+                        <option value="computacion">Ing. en Computación</option>
+                        <option value="industrial">Ing. Industrial</option>
+                        <option value="electronica">Ing. en Electrónica</option>
+                        <option value="mecatronica">Ing. Mecatrónica</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Seleccione Fecha Mat:</td>
+                <td><input type="date" id="fecha"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="botonAdd" onclick="agregar();">Agregar estudiante a la lista</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Cancelar</button>
+                    <button id="botonGrafico" onclick="generarGrafico();">Generar Gráfico</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Carrera</th>
+                <th>Fecha Mat.</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+
+    <div id="pieChart"></div>
+
+</body>
+</html>

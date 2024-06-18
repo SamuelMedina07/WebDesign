@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Atributos</title>
+    <style>
+        .oculto{
+            display: none;
+        }
+        .visible{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deleniti rerum magni, tenetur alias officia omnis sunt totam porro itaque tempore fuga quo quas praesentium natus maxime non ab illo temporibus veritatis <span id="textoIn" class="oculto">nam maiores soluta? Ipsa omnis enim quia. Excepturi, tenetur sapiente!
+    </span>
+    </p>
+<a href="#" id="enlace" onclick="mostrar(); return false;">Seguir Leyendo</a>
+
+<script>
+    function mostrar(){
+        let elemento = document.getElementById("textoIn");
+        elemento.className = "visible";
+
+        let enlace = document.getElementById("enlace");
+        enlace.className ="oculto";
+    }
+</script>
+</body>
+</html>
