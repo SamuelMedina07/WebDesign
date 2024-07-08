@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Parcial I Samuel Medina</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Examen Samuel Ernesto Medina 201920010386</h1>
+    <div id="CapturaDiv">
+        
+        <table>
+            <tr>
+                <td>Articulos:</td>
+                <td>
+                    <select name="" id="articulo">
+                        <option value="estufa">estufa</option>
+                        <option value="lavadora">lavadora</option>
+                        <option value="refrigeradora">refrigeradora</option>
+                        <option value="licuadora">licudora</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Cantidad:</td>
+                <td><input type="text" id="cantidad" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            <tr>
+                <td>Precio:</td>
+                <td><input type="text" id="precio" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            
+            <tr>
+                <td>Subtotal:</td>
+                <td><input type="text" id="subtotal" onkeypress="return soloNumeros(event);" disabled></td>
+            </tr>
+            <tr>
+                <td>ISV 15%:</td>
+                <td><input type="text" id="isv" onkeypress="return soloNumeros(event);" disabled></td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td><input type="text" id="total" onkeypress="return soloNumeros(event);" disabled ></td>
+            </tr> 
+                <td>
+                    <button id="botonAdd" onclick="camposvacios();">Agregar Electrodomestico</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Limpiar</button>
+                    <button id="botonGrafico" onclick="generarGrafico();">Generar Gráfico</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>Articulo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>ISV(15%)</th>
+                <th>Total</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+
+    <div id="pieChart"></div>
+
+</body>
+</html>

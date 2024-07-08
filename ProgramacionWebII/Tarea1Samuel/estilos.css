@@ -1,0 +1,37 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    color:black;
+}
+
+
+#caja1{
+    margin: 5% auto;
+   /* background-color: #393d42;*/
+    width: 45%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: black;
+}
+
+.grupobotones{
+    margin: auto;
+    width: 40%;
+}
+.botones{
+    background-color: #8c8c8c;
+    margin: 1%;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #1f2124;
+}
+
+.botones:hover{
+    background-color: #0e8b1a;
+    border: 2px solid #000000;
+    color: white;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="logica.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 style="text-align: center;">Tarea 2 por Samuel Ernesto Medina</h1>
+    <div id="CapturaDiv">
+        
+        <table id="pl">
+            <tr>
+                <td>Categoria:</td>
+                <td>
+                    <select name="platos" id="slct1">
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Platillo:</td>
+                <td>
+                    <select name="platillo" id="slct2">
+
+                    </select>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td>Precio:</td>
+                <td><input type="text" id="precio" onkeypress="return soloNumeros(event);"></td>
+            </tr>
+            
+            <tr>
+                <td>Fecha de Pedido:</td>
+                <td><input type="date" id="fecha"></td>
+            </tr>
+                <td>
+                    <button id="botonAdd" onclick="camposvacios();">Agregar Pedido</button>
+                </td>
+                <td>
+                    <button id="botonCancel" onclick="cancelar();">Limpiar</button>
+                    <button id="botonGrafico" onclick="generarGrafico();">Generar Gráfico</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table id="grilla">
+            <thead>
+                <th>Categoria</th>
+                <th>Platillo</th>
+                <th>Precio</th>
+                <th>Fecha</th>
+                <th>Eliminar</th>
+            </thead>
+        </table>
+    </div>
+
+    <div id="charts">
+    <div id="pieChart"></div>
+    <div id="barChart"></div>
+    </div>
+
+</body>
+    <script>
+        let platos = ["","Entradas", "Pizzas","Plato Especial","Postres"];
+        let entradas =["Pan de ajo","Ensalada"];
+        let pizzas =["Pizza Personal","Pizza Grande"];
+        let especial = ["Pasta Carbonara"];
+        let postres = ["Pastel de Chocolate", "Copa de Helado"];
+        let vacio = [""]
+        let slct1 = document.getElementById("slct1");
+        let slct2 = document.getElementById("slct2");
+
+        platos.forEach(function addPlatos(item){
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            slct1.appendChild(option);
+        });
+
+        slct1.onchange = function() {
+            slct2.innerHTML = "<option></option>";
+            if (this.value == ""){
+                addToSlct2(vacio);
+            }
+            if (this.value == "Entradas") {
+                addToSlct2(entradas);
+            } if (this.value == "Pizzas") {
+                addToSlct2(pizzas);
+            }
+            if (this.value == "Plato Especial") {
+                addToSlct2(especial);
+            }
+            if (this.value == "Postres") {
+                addToSlct2(postres);
+            }
+        }
+
+        function addToSlct2(arr) {
+            arr.forEach(function (item){
+                let option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                slct2.appendChild(option);
+            });
+        }
+    </script>
+</html>
